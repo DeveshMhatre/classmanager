@@ -1,0 +1,26 @@
+<h1>Users#index</h1>
+
+<%= link_to 'New User', new_user_path, class: 'btn-small purple darken-4' %>
+
+<table class="highlight">
+	<thead>
+		<th>
+			ID
+		</th>
+		<th>
+			Username
+		</th>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+			<tr>
+				<td>
+					<%= user.id %>
+				</td>
+				<td>
+					<%= user.username %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

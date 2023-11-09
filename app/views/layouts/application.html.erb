@@ -16,6 +16,15 @@
         <a href="#" class="brand-logo center">Logo</a>
       </div>
     </nav>
-    <%= yield %>
+
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
+
+    <main class="container">
+      <%= yield %>
+    </main>
   </body>
 </html>
